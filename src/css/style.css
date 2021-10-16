@@ -2,6 +2,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 420px;
+    height: 410px;
 }
 
 div {
@@ -16,3 +17,7 @@ img {
     background-image: url('../img/goblin.png');
     background-size: contain;
 }
+
+img:hover {
+    cursor: url('../img/hammer.png'), auto;
+  }

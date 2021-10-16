@@ -4,6 +4,8 @@ export default class GoblinGame {
   constructor(el) {
     this.el = el;
     this.index = randomIndex(16);
+    this.defeatCounter = 0;
+    this.points = 0;
   }
 
   drawTable() {
@@ -21,7 +23,22 @@ export default class GoblinGame {
       const newRandomIndex = randomIndex(this.index);
       this.index = newRandomIndex;
       insertImage(this.el, newImg, newRandomIndex);
+      this.defeatCounter += 1;
+      if (this.defeatCounter > 5) {
+        alert(`Defeat! Your points ${this.points}!`);
+        this.defeatCounter = 0;
+        this.points = 0;
+      }
     };
-    setInterval(newInsertFunction, 1000);
+    setInterval(newInsertFunction, 700);
+  }
+
+  initGame() {
+    this.el.addEventListener('click', (evt) => {
+      if (evt.target.tagName === 'IMG') {
+        this.points += 1;
+        this.defeatCounter -= 1;
+      }
+    });
   }
 }
