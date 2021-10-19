@@ -1,11 +1,11 @@
-body {
+.gamefield {
     display: flex;
     flex-wrap: wrap;
     width: 420px;
     height: 410px;
 }
 
-div {
+.cell {
     border: 2px solid black;
     width: 100px;
     height: 100px;
@@ -21,3 +21,7 @@ img {
 img:hover {
     cursor: url('../img/hammer.png'), auto;
   }
+
+.hide {
+    display: none;
+}
