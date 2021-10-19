@@ -25,3 +25,24 @@ img:hover {
 .hide {
     display: none;
 }
+
+.label {
+    font-size: 18px;
+    font-family: Helvetica, sans-serif;
+    padding-left: 40px;
+    color: lightslategray;
+}
+
+.missed {
+    color: brown;
+}
+
+.points {
+    color: chartreuse;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: cyan;
+}
